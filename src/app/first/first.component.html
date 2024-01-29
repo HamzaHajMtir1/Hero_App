@@ -18,14 +18,14 @@
 
     <div class="row mt-5">
         <div class="col-3" *ngFor="let item of hero">
-            <div class="card p-1">
+            <div [ngClass]="{'card p-1':true , 'IronMan':item.name == 'Iron Man', 'CaptenAmerican':item.name == 'Capten American', 'Hulk':item.name == 'Hulk', 'SpiderMan':item.name == 'Spider Man', 'Wolverine':item.name == 'Wolverine'}">
                 <div class="card-image">
                     <img class="img-fluid mx-auto w-100" [src]="item.imageURL" alt="">
                 </div>
 
                 <div class="card-body">
-                    <h2>{{item.name}}</h2>
-                    <p>{{item.power}}</p>
+                    <h2 class="text-light">{{item.name}}</h2>
+                    <p class="text-light">{{item.power}}</p>
                 </div>
             </div>
         </div>

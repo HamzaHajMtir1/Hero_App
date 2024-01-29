@@ -7,3 +7,19 @@ h1 {
     font-weight: bold;
     font-size: 4em;
 }
+
+.IronMan {
+    background-color: #AA0244;
+}
+.CaptenAmerican {
+    background-color: #263554;
+}
+.Hulk {
+    background-color: #3E6C46;
+}
+.SpiderMan {
+    background-color: #F71A2B;
+}
+.Wolverine {
+    background-color: #E7BD4C;
+}
