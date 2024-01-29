@@ -3,55 +3,29 @@
     <h1 class="text-center mt-5">Marvel</h1>
     <div class="row mt-5">
         <div class="col-3">
-            <input type="text" class="form-control m-1">
+            <input type="text" class="form-control m-1" placeholder="Name" [(ngModel)]="marvel.name">
         </div>
         <div class="col-3">
-            <input type="text" class="form-control m-1">
+            <input type="text" class="form-control m-1" placeholder="Power" [(ngModel)]="marvel.power">
         </div>
         <div class="col-3">
-            <input type="text" class="form-control m-1">
+            <input type="text" class="form-control m-1" placeholder="Picture URL" [(ngModel)]="marvel.imageURL">
         </div>
         <div class="col-3">
-            <button class="btn form-control m-1 text-light">Create</button>
+            <button class="btn form-control m-1 text-light" (click)="add()">Create</button>
         </div>
     </div>
 
     <div class="row mt-5">
-        <div class="col-3">
+        <div class="col-3" *ngFor="let item of hero">
             <div class="card p-1">
                 <div class="card-image">
-                    <img class="img-fluid mx-auto w-100" src="https://i0.wp.com/vrscout.com/wp-content/uploads/2022/10/IronManVRQuest2.jpg?fit=810%2C479&ssl=1" alt="">
+                    <img class="img-fluid mx-auto w-100" [src]="item.imageURL" alt="">
                 </div>
 
                 <div class="card-body">
-                    <h2>Iron Man</h2>
-                    <p>arc reactor</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3">
-            <div class="card p-1">
-                <div class="card-image">
-                    <img class="img-fluid mx-auto w-100" src="https://i0.wp.com/vrscout.com/wp-content/uploads/2022/10/IronManVRQuest2.jpg?fit=810%2C479&ssl=1" alt="">
-                </div>
-
-                <div class="card-body">
-                    <h2>Iron Man</h2>
-                    <p>arc reactor</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-3">
-            <div class="card p-1">
-                <div class="card-image">
-                    <img class="img-fluid mx-auto w-100" src="https://i0.wp.com/vrscout.com/wp-content/uploads/2022/10/IronManVRQuest2.jpg?fit=810%2C479&ssl=1" alt="">
-                </div>
-
-                <div class="card-body">
-                    <h2>Iron Man</h2>
-                    <p>arc reactor</p>
+                    <h2>{{item.name}}</h2>
+                    <p>{{item.power}}</p>
                 </div>
             </div>
         </div>
