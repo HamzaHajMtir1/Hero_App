@@ -7,30 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit{
 
-  marvel ={
-    name:"",
-    power:"",
-    imageURL:""
-  }
-
-  hero :any[] = [];
-
-  constructor() {
-
-  }
+  constructor() { }
+  
   ngOnInit(): void {
-
-  }
-
-  add(){
-    this.hero.push(this.marvel);
-    this.marvel = {
-      name:"",
-      power:"",
-      imageURL:""
-    }
-
-    console.log(this.hero)
+  
   }
 
 }

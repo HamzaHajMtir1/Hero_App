@@ -1,33 +1,7 @@
 
 <div class="container">
     <h1 class="text-center mt-5">Marvel</h1>
-    <div class="row mt-5">
-        <div class="col-3">
-            <input type="text" class="form-control m-1" placeholder="Name" [(ngModel)]="marvel.name">
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control m-1" placeholder="Power" [(ngModel)]="marvel.power">
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control m-1" placeholder="Picture URL" [(ngModel)]="marvel.imageURL">
-        </div>
-        <div class="col-3">
-            <button class="btn form-control m-1 text-light" (click)="add()">Create</button>
-        </div>
-    </div>
+    <app-ajout></app-ajout>
 
-    <div class="row mt-5">
-        <div class="col-3" *ngFor="let item of hero">
-            <div [ngClass]="{'card p-1':true , 'IronMan':item.name == 'Iron Man', 'CaptenAmerican':item.name == 'Capten American', 'Hulk':item.name == 'Hulk', 'SpiderMan':item.name == 'Spider Man', 'Wolverine':item.name == 'Wolverine'}">
-                <div class="card-image">
-                    <img class="img-fluid mx-auto w-100" [src]="item.imageURL" alt="">
-                </div>
-
-                <div class="card-body">
-                    <h2 class="text-light">{{item.name}}</h2>
-                    <p class="text-light">{{item.power}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-liste></app-liste>
 </div>
